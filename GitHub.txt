@@ -23,11 +23,9 @@
   - clear : 내용 삭제
   - touch : 파일을 생성하는 명령어
   - MKdir : 새 폴더를 생성하는 명령어      
-      ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e72e798c-5e63-40d8-9fb9-2fe03e8e4085/Untitled.png)
       
   - ls : 현재 작업 중인 디렉토리의 폴더/파일 목록을 보여주는 명령어
   - cd : 현재 작업 중인 디렉토리를 변경하는 명령어
-      ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c98dc12e-84f1-4fac-8a11-0377e36911bc/Untitled.png)
       
   
   - start(W), open(M) : 파일/폴더를 여는 명령
@@ -35,16 +33,12 @@
     - -r 옵션(폴더 안의 모든 파일들을 제거하고 폴더도 삭제)
               주면 폴더 삭제 가능
 
-      ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/540a458f-581b-4622-834c-7783460deb60/Untitled.png)
-
-  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/adc783a9-5373-4b08-b067-25165c13df32/Untitled.png)
   - SSAFY@DESKTOP : 컴퓨터 이름
   - ~ : 현재 작업중인 위치/유저의 홈 디렉토리 (C:\Users\multicampus)
 
 - cd .. : 상위폴더로 이동
   - .. (상위폴더)
-  ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/80e45759-4ba5-41cb-82bb-0ec948516082/Untitled.png)
-  
+ 
   - . (현재 폴더)
 
 
@@ -55,7 +49,6 @@
 - Repository
   - 특정 디렉토리를 버전 관리하는 저장소
   - git init 명령어로 로컬 저장소를 생성  
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fe76a5f8-7e14-497e-8feb-a80c795c97bd/Untitled.png)
     - .git(숨김파일로 생김)
     - (master) 생성됨.
 
@@ -87,26 +80,20 @@
 
 - git status
   - 현재 git으로 관리되고 있는 파일의 상태를 알 수 있음.
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/27414cb9-0265-4aee-9b20-aec944f7e291/Untitled.png)
-    
+ 
     - untracked files(저장이 안 됨.)
     - git add [README.m](http://README.md)d 하지 않음. 해야 한다.
 
 - git commit -m “한줄설명”   
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3a222440-e45a-4423-910c-55070db90fc6/Untitled.png)
-    
+
 
 - git log : commit 내용을 확인가능
 
 - github Repository 생성하기
   - git remote add origin {remote_repo 주소(url)}
       
-      ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8e1a735-e56c-4de9-baf8-6ca50248e736/Untitled.png)
-      
   
   - 처음에 push 할 때에는 로그인해서 연결해야
-      
-      ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0386123b-21b8-4335-8c88-a6673347bb4c/Untitled.png)
       
   
   - git push -u origin master : origin과 repo가 붙음
@@ -114,8 +101,6 @@
         
 - git clone {remote_repo}
   - remote_repo를 local로 복사합니다.
-      
-      ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d9d507b8-3217-4655-92d4-761176631575/Untitled.png)
       
   
   - VScode로 이동하기
