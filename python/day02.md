@@ -48,8 +48,6 @@ print(keyword.kwlist)
 
 **3) 자료형 1. 정수 자료형(int)** 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/329abb64-f172-47aa-95de-d3fa76f27296/Untitled.png)
-
 ```python
 import sys
 max_int = sys.maxsize
