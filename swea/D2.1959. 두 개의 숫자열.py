@@ -1,5 +1,3 @@
-# 두 개의 숫자열
-
 def mul(A, B):
     lst = [A, B]
     idx_1 = [len(A), len(B)].index(min(len(A), len(B)))  # 길이가 짧은 값 찾기 

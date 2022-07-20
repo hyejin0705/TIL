@@ -1,5 +1,3 @@
-# 초심자의 회문 검사
-
 def word_check(word):
     if word == word[::-1]:
         return 1

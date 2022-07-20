@@ -1,5 +1,3 @@
-# 중간값 찾기
-
 N = int(input())
 
 if N >= 9 and N <= 199:

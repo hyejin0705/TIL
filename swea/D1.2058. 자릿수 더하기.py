@@ -1,5 +1,3 @@
-# 자릿수 더하기
-
 N = input()
 
 if int(N) >= 1 and int(N) <= 9999:
