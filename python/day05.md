@@ -37,7 +37,7 @@ pprint()
 2. strip() - 문자열의 공백을 제거하는 함수
 3. print()
     - 주요 파라미터
-        - end : print의 실행 후 다음 print와의 차이의 구분???
+        - end : print의 실행 후 다음 print와의 사이의 구분해주는....
             ```python
             for i in range(5):
                 print(i, end = ' ') # 0 1 2 3 4 
