@@ -1,21 +1,21 @@
-#### 파일열기
+#### 1. 파일열기
 ```python
 open('파일 경로', encoding='utf-8')
 ```
 
-#### json 파일 불러오기
+#### 2. json 파일 불러오기
 ```python
 import json
 json.load(파일)
 ```
 
-#### json or 딕셔너리 형 깔끔하게 출력하기
+#### 3. json or 딕셔너리 형 깔끔하게 출력하기
 ```python
 from pprint import pprint
 pprint()
 ```
 
-#### 딕셔너리형태의 특징?
+#### 4. 딕셔너리형태의 특징?
 - keys(), values()에는 인덱싱, 슬라이싱이 되지 않는다.
     - 해결방안 : list(dict.keys())같이 리스트로 묶어주면 리스트 형태로 바뀌면서 순서가 있는 형태로 바뀜.
 
@@ -24,7 +24,28 @@ pprint()
     2. dict.get('key')
 
 
-#### 숫자인지 확인
+#### 5. 숫자인지 확인
 - 숫자이면 True, 아니면 False
     ' '.isnumeric() 
     ' '.isdigit()
+
+- 문자인지 확인
+    ' '.isalpha
+
+#### 6. 파이썬 함수
+1. split() - 문자열을 구분자를 기준으로 나누는 함수
+2. strip() - 문자열의 공백을 제거하는 함수
+3. print()
+    - 주요 파라미터
+        - end : print의 실행 후 다음 print와의 차이의 구분???
+            ```python
+            for i in range(5):
+                print(i, end = ' ') # 0 1 2 3 4 
+                print(i)  # end의 기본값은 \n(한 줄 띄기) 
+                # 0
+                # 1
+                # 2
+                # 3
+                # 4
+            ```
+        - sep : print안의 여러 출력값들의 구분해주는..
