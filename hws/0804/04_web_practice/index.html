@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>SSAFY APPAREL</title>
+  <!-- CDN 가져오기 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+
+
+<body>
+
+  <!-- 내비게이션 바는 스크롤을 하더라도 항상 상단에 고정, sticky-top -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="text-decoration-none text-dark ms-3" href="#">SSAFY APPAREL</a>
+      
+      <div class="navbar-nav d-flex">
+        <a class="nav-link active text-decoration-none text-dark" aria-current="page" href="#">HOME</a>
+        <a class="nav-link text-decoration-none text-dark" href="products.html">PRODUCTS</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- apparel 이미지를 활용하여 예시 화면과 같이 배너를 설정 -->
+  <header style="max-height: 600px; overflow: hidden">
+    <img src="assets/apparel.jpeg" alt="Error" class="img-fluid box col-12" style="max-height: initial;">
+  </header>
+  
+
+
+  <section id="about_company">
+
+    <div class="d-flex justify-content-center mt-4">
+
+      <div style="width: 400px;">
+        <img src="assets/apparel2.jpeg" class="img-fluid rounded">
+      </div>
+      
+      <article style="width: 35%;" class="mx-3">
+        <h2 style="font-family: Merienda One;" class="d-flex justify-content-center">About Our Company</h2>
+        <p style="font-size: large;" class="text-decoration-none text-dark">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id pariatur fuga eveniet repudiandae, nesciunt distinctio impedit. Incidunt molestiae architecto, ipsa quis quas corrupti temporibus, aspernatur alias dolor quidem iure quasi?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa inventore reprehenderit repellendus, maxime laudantium soluta voluptatem aut officia illo adipisci optio nisi eum sit ex deleniti id incidunt? Architecto, autem!
+        </p>
+      </article>
+
+    </div>
+  </section>  
+
+
+  <section id="contact_us">  
+
+    <h2 style="font-family: Merienda One;" class="d-flex justify-content-center my-4">Contact Us</h2>
+    
+    <div class="d-flex justify-content-center"> 
+      
+      <form style="border: 1px solid black; width: 400px; height: 250px;" class="mx-5">
+        <div class="m-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" value="Username">
+        </div>
+
+        <div class="m-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" value="Email">
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn-white" style="border: 1px solid grey; margin-left: 10em;">Send</button>
+        </div>
+      </form>
+
+
+
+
+        
+      <div style="width: 25%;">
+        <img src="assets/contact.jpg" alt="" class="img-fluid">
+      </div>
+    </div>
+    
+  </section>
+  
+
+  <section id="mare">
+    <h2 style="font-family: Merienda One;" class="d-flex justify-content-center my-4">More</h2>
+      
+    <article class="d-flex justify-content-around">
+      <div>
+        <img src="assets/email.png" alt="" style="width: 60px;" class="mx-4">
+        <h6 class="d-flex flex-column align-items-center mt-3">Email Address</h6>
+        <p class="d-flex flex-column align-items-center">ssafy@ssafy.com</p>          
+      </div>
+
+
+      <div>
+        <img src="assets/telephone.png" alt="" style="width: 60px;" class="mx-4">
+
+        <h6 class="d-flex flex-column align-items-center mt-3">Phone Number</h6>
+        <p class="d-flex flex-column align-items-center">010-1234-3678</p>
+      </div>
+
+
+      <div>
+        <img src="assets/location.png" alt="" style="width: 60px;" class="mx-5">
+        
+        <h6 class="d-flex flex-column align-items-center mt-3">Loction</h6>
+        <p class="d-flex flex-column align-items-center">서울특별시 역삼동</p>
+
+      </div>
+
+      <div>
+        <img src="assets/clock.png" alt="" style="width: 60px;" class="mx-4">
+
+        <h6 class="d-flex flex-column align-items-center mt-3">Working Hours</h6>
+        <p class="d-flex flex-column align-items-center">9am - 6pm</p>
+
+      </div>
+
+    </article>
+
+  </section>
+  
+
+  <footer>
+    <hr>
+    <p class="d-flex justify-content-center">ⓒ Copyright 2022 By SSAFY | All Rights Resserved</p>
+    <a href="index.html" class="position-absolute end-0 me-3" style="width: 30px;">
+      <img src="assets/up-arrow.png" alt="" class="img-fluid">
+    </a>
+      
+  </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
