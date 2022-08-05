@@ -1,0 +1,21 @@
+/* 01_nav_footer.css */
+/* 아래에 코드를 작성해 주세요. */
+
+.modal { overflow: auto !important; }
+
+
+/* • Navigation Bar
+1. Bootstrap Navbar Component를 참고합니다.
+2. 스크롤을 하더라도 항상 화면 상단에 고정되어 있습니다.
+3. 로고 이미지는 제공된 logo.png를 사용합니다.
+4. 로고 이미지는 하이퍼링크 역할도 가능하며 클릭 시 02_home.html로 이동해야 합니다.
+5. 내비게이션 메뉴 중 Home, Community는 하이퍼링크 역할도 가능하며 클릭 시 각각
+02_home.html, 03_community.html로 이동해야 합니다.
+6. 내비게이션 메뉴 중 Login은 클릭 시 Bootstrap Modal Component가 나타납니다.
+• Modal Component 내부에는 HTML form 요소를 배치합니다.
+7. Viewport의 가로 크기 별 반응형 디자인은 스크린 샷 예시를 참고하여 일치하도록 합니다.
+
+
+• Footer
+1. 스크롤을 하더라도 항상 화면 하단에 고정되어 있습니다.
+2. Footer에 작성된 내용은 수직·수평 가운데 정렬되어 있습니다. */

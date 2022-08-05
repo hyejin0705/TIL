@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="01_nav_footer.css">
+  <link rel="stylesheet" href="02_home.css">
+  <title>Community</title>
+</head>
+<body>
+  <!-- 01_nav_footer에서 완성한 Navigation bar & Modal & Footer 코드를 적절한 위치에 사용합니다. -->
+
+  <!-- 스크롤을 하더라도 항상 화면 상단에 고정, sticky-top -->
+  <!-- Bootstrap Navbar Component 활용, toggler는 width 768px 미만일 때 활성화, navbar-expand-md -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark sticky-top">
+
+    <div class="container-fluid d-flex justify-content-between">
+  
+      <!-- 로고 이미지는 클릭 시 02_home.html로 이동 -->
+      <a class="navbar-brand" href="02_home.html">
+        <img src="images/logo.png" alt="Logo_image" width="150" height="50">
+      </a>
+
+      <!-- toggler : 햄버거 모양 -->
+      <button class="navbar-toggler col-" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- Home, Community는 클릭 시 각각 02_home.html, 03_community.html로 이동 -->
+          <li class="nav-item">
+            <a class="nav-link active" href="02_home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="03_community.html">Community</a>
+          </li>
+          <li class="nav-item">
+            <!-- <a class="nav-link text-white" href="#">Login</a>-->
+            <a class="nav-link" href="#exampleModal" data-bs-toggle="modal">Login</a>
+            
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  
+
+  <!-- Modal 실행은 nav 밖에서 실행해야 활성화가 됨. -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="email" class="col-form-label">Email address</label>
+              <input type="email" class="form-control" id="email">
+              <!-- 회색으로 이메일 작성시 주의사항 달기 -->
+              <p style="font-size: small; color: grey;">We'll never share your email with anyone else.</p>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="col-form-label">password</label>
+              <input type="password" class="form-control" id="password">
+            </div>
+
+            <div class="mb-3">
+              <input type="checkbox" value="Check me out" id="checkbox">
+              <label for="checkbox" class="col-form-label">Check me out</label>
+            </div>
+          </form>
+
+        </div>
+        <!-- close 누르면 취소, submit 누르면 제출 -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- 02_home.html -->
+  <header>
+    <!-- Bootstrap Carousel Component 활용, 최소 3장 이상 사용하며 자동으로 전환 -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/header1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/header2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/header3.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 중앙정렬 -->
+  <h1 class="text-center">Boxoffice</h1>
+
+  <div>
+    <!-- Bootstrap Card Component 활용 -->
+    <!-- 가로 크기가 576px 미만일 경우 한 행에 1개씩 표시, 이상일 경우 한 행에 2개 표시
+        758px 이상일 경우 3개 표시 -->
+    <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+      <article class="col">
+        
+        <!-- 길이는 100으로 고정 -->
+        <div class="card h-100">
+          <img src="images/movie1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+          </div>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="card h-100">
+          <img src="images/movie2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+          </div>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="card h-100">
+          <img src="images/movie3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+          </div>
+        </div>
+      </article>
+      
+      <article class="col">
+        <div class="card h-100">
+          <img src="images/movie4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+          </div>
+        </div>
+      </article>
+      
+      <article class="col">
+        <div class="card h-100">
+          <img src="images/movie5.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+          </div>
+        </div>
+      </article>
+
+      <article class="col">
+        <div class="card h-100">
+          <img src="images/movie6.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </div>
+
+
+
+
+  <!-- 스크롤을 하더라도 항상 화면 하단에 고정, fixed-bottom -->
+  <!-- fixed랑 sticky의 차이점, fixed-bottom은 스크롤 하더라도 항상 하단에 나타남
+        단, sticky-bottom은 그냥 하단에 고정 왜??? top은 스크롤 하더라고 항상 상단에 고정인데.... -->
+  <footer class="fixed-bottom">
+    <!-- 내용은 수직·수평 가운데 정렬, text-center -->
+    <p class="text-center">Web-booststrap PJT, by hyejin</p>
+  </footer>
+  
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>  
+</body>
+</html>
