@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h1>{{ person.username }}님의 프로필</h1>
+
+  <hr>
+  <h2>{{ person.username }}이 좋아요 한 영화 목록</h2>
+  {% for movie in person.like_movies.all %}
+    <div>{{ movie.title }}</div>
+  {% endfor %}
+  
+  <hr>
+
+  <h2>{{ person.username }}이 댓글을 작성한 영화 목록</h2>
+  {% for movie in person.comment_set.movie_set.all %}
+    <div>{{ movie.title }}</div>
+  {% endfor %}
+
+  <hr>
+
+  <a href="{% url 'movies:index' %}">BACK</a>
+{% endblock content %}
