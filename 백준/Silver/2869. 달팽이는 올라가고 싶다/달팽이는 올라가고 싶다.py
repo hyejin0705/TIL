@@ -1,7 +1,6 @@
 A, B, V = map(int, input().split())
 
-x = (V-B)/(A-B)
-if x == int(x):
-    print(int(x))
+if (V - B) % (A - B):
+    print((V - B)//(A - B) + 1)
 else:
-    print(int(x) + 1)
+    print((V - B)//(A - B))
