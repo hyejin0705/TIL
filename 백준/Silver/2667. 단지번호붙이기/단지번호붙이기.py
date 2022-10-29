@@ -1,4 +1,4 @@
-def dfs(i, j):
+def bfs(i, j):
     q = [[i, j]]
     v[i][j] = 1
     cnt = 1
@@ -28,7 +28,7 @@ ans = []
 for i in range(N):
     for j in range(N):
         if arr[i][j] and not v[i][j]:
-            ans.append(dfs(i, j))
+            ans.append(bfs(i, j))
 
 ans.sort()
 # 디버깅: 각 단지내 집의 수를 오름차순으로 정렬
