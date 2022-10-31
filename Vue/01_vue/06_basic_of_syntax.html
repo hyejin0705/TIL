@@ -9,10 +9,10 @@
 <body>
   <!-- 1. Text interpolation -->
   <div id="app">
-    <!-- <p>메시지: {{ msg }}</p>    -->
-    <!-- <p>HTML 메시지 : {{ rawHTML }}</p> -->
-    <!-- <p>HTML 메시지 : <span v-html="rawHTML"></span></p> -->
-    <!-- <p>{{ msg.split('').reverse().join('') }}</p> -->
+    <p>메시지: {{ msg }}</p>   
+    <p>HTML 메시지 : {{ rawHTML }}</p>
+    <p>HTML 메시지 : <span v-html="rawHTML"></span></p>
+    <p>{{ msg.split('').reverse().join('') }}</p>
   </div>
 
   <!-- 2. v-text & v-html -->
@@ -35,22 +35,22 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script>
     // 1. Text interpolation
-    // const app = new Vue({
-    //   el: '#app',
-    //   data: {
-    //     // msg: 'Text interpolation',
-    //     // rawHTML: '<span style="color:red"> 빨간 글씨</span>'
-    //   }
-    // })
+    const app = new Vue({
+      el: '#app',
+      data: {
+        msg: 'Text interpolation',
+        rawHTML: '<span style="color:red"> 빨간 글씨</span>'
+      }
+    })
 
     // 2. v-text && v-html
-    // const app2 = new Vue({
-    //   el: '#app2',
-    //   data: {
-    //     message: 'Hello!',
-    //     html: '<a href="https://www.google.com">GOOGLE</a>'
-    //   }
-    // })
+    const app2 = new Vue({
+      el: '#app2',
+      data: {
+        message: 'Hello!',
+        html: '<a href="https://www.google.com">GOOGLE</a>'
+      }
+    })
 
     // 3. v-show && v-if
     // const app3 = new Vue({
