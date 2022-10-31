@@ -8,15 +8,15 @@
 </head>
 <body>
   <div id="app">
-    <h2>1. Input -> Data</h2>
+    <!-- <h2>1. Input -> Data</h2>
     <h3>{{ myMessage }}</h3>
     <input @input="onInputChange" type="text">
-    <hr>
+    <hr> -->
 
-    <!-- <h2>2. Input <-> Data</h2>
+    <h2>2. Input <-> Data</h2>
     <h3>{{ myMessage2 }}</h3>
     <input v-model="myMessage2" type="text">
-    <hr> -->
+    <hr>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
@@ -25,13 +25,13 @@
       el: '#app',
       data: {
         myMessage: '',
-        // myMessage2: '',
+        myMessage2: '',
       },
-      methods: {
-        onInputChange: function (event) {
-          this.myMessage = event.target.value
-        },
-      }
+      // methods: {
+      //   onInputChange: function (event) {
+      //     this.myMessage = event.target.value
+      //   },
+      // }
     })
   </script>
 </body>
