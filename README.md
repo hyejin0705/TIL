@@ -5,8 +5,6 @@
 [GitHub 설명](https://github.com/hyejin0705/TIL/blob/master/startcamp/GitHub.md)
 
 
-[CodeUp 파이썬 100제](https://github.com/hyejin0705/TIL/tree/master/Codeup)
-
 
 [공부내용](https://github.com/hyejin0705/TIL/tree/master/python)
 
