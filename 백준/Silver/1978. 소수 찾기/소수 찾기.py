@@ -3,11 +3,11 @@ data = list(map(int, input().split()))
 count = 0
 
 for x in data:
-  for i in range(2, x+1):
-    if x % i == 0:
-      if x == i:
-        count += 1
-      
-      break
+    if x > 1:         # 1은 소수가 아님
+        for i in range(2, x):
+            if x % i == 0:
+                break
+        else:
+            count += 1
 
 print(count)
