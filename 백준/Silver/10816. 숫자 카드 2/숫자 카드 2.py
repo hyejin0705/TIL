@@ -1,20 +1,26 @@
+# 디버깅: M개의 숫자카드 중에서 중복일 가능성 염두
 import sys
 
-N = int(sys.stdin.readline())
+input = sys.stdin.readline   # 시간초과 방지
 
-lst = list(map(int, sys.stdin.readline().split()))
+N = int(input())
 
-M = int(sys.stdin.readline())
+# 상근이 가지고 있는 숫자카드
+lst = list(map(int, input().split()))
 
-check = list(map(int, sys.stdin.readline().split()))
+M = int(input())
 
+# 찾아야 할 숫자카드
+check = list(map(int, input().split()))
+
+# 찾아야 할 숫자카드 dict
 dic = {num: 0 for num in check}
 
+# 상근이 카드 확인
 for num in lst:
-    if num in dic.keys():
-        dic[num] += 1
+    if num in dic.keys():   # 찾아야 할 카드가 존재하면,
+        dic[num] += 1       # 카운팅
 
 for num in check:
-    if num in dic.keys():
-        print(dic[num], end=' ')
+    print(dic[num], end=' ')   # 출력하기 (공백기준)
 print()
