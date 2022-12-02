@@ -25,3 +25,13 @@ N, M, K = map(int, sys.stdin.readline().split())
 ans = dac(N, M, K)
 
 print(ans)
+
+
+
+# ------------------------------------------------------------------
+# 시간초과 코드
+
+# 너무 단순하게 생각해서 풀었더니... 시간초과 발생ㅜㅠ
+
+# N, M, K = map(int, sys.stdin.readline().split())
+# print(N ** M % K)
