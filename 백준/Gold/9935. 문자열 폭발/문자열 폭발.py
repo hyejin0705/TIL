@@ -1,14 +1,18 @@
-string = list(input())
-s = list(input())
+import sys
+
+check = list(sys.stdin.readline().strip())
+remov = list(sys.stdin.readline().strip())
+length = len(remov)
 stack = []
-if len(s) == 1:
-    for i in range(len(string)):
-        if string[i] != s[0]:
-            stack.append(string[i])
+
+for ch in check:
+    stack.append(ch)
+    # print(stack[-length:])   # out of range 에러 XXXX
+
+    if stack[-length:] == remov:
+        del stack[-length:]
+
+if stack:
+    print(''.join(stack))
 else:
-    for i in range(len(string)):
-        stack.append(string[i])
-        if stack[-1] == s[-1] and stack[-len(s):] == s:
-            for _ in range(len(s)):
-                stack.pop()
-print(''.join(stack)) if stack else print('FRULA')
+    print('FRULA')
