@@ -1,15 +1,21 @@
-a,b = map(int,input().split())
-r = 1
-while(b!=a):
-    r+=1
-    temp = b
-    if b%10 == 1:
-        b//=10
-    elif b%2 == 0:
-        b//=2
-    
-    if temp == b:
-        print(-1)
+A, B = map(int, input().split())
+
+cnt = 1
+while B != A:
+    if B < A:
+        cnt = -1
         break
-else:
-    print(r)
+
+    if B % 10 == 1:
+        B //= 10
+        cnt += 1
+
+    elif B % 2 == 0:
+        B //= 2
+        cnt += 1
+
+    else:
+        cnt = -1
+        break
+
+print(cnt)
