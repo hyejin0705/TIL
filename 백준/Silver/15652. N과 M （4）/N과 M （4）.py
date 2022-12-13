@@ -1,15 +1,14 @@
-n,m = map(int, input().split())
- 
-s = []
- 
-def dfs(start):
-    if len(s)==m:
-        print(' '.join(map(str,s)))
+def dfs(cnt, n, lst):
+    if cnt == M:
+        print(*lst)
         return
-    
-    for i in range(start, n+1):
-        s.append(i)
-        dfs(i)
-        s.pop()
-    
-dfs(1)
+
+    for i in range(n, N + 1):
+        lst.append(i)
+        dfs(cnt + 1, i, lst)
+        lst.pop()
+
+
+N, M = map(int, input().split())
+
+dfs(0, 1, [])
