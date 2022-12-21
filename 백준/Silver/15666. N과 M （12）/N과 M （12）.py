@@ -1,16 +1,15 @@
-n, m = map(int, input().split())
-k = sorted(set(list(map(int, input().split()))))
-ans = []
-p = []
-def solve(depth, idx):
-    if depth == m:
-        print(' '.join(map(str, ans)))
+def dfs(cnt, n, ans):
+    if cnt == M:
+        print(*ans)
         return
 
-    for i in range(idx, len(k)):
-        ans.append(k[i])
-        solve(depth+1, i)
+    for i in range(n, len(lst)):
+        ans.append(lst[i])
+        dfs(cnt + 1, i, ans)
         ans.pop()
 
-solve(0, 0)
-p = sorted(list(set(p)))
+N, M = map(int, input().split())
+
+lst = sorted(list(set(map(int, input().split()))))
+
+dfs(0, 0, [])
