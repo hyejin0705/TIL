@@ -1,21 +1,55 @@
-from collections import deque
+from collections import deque     # 시간단축 방안
 
-def bfs():
+def bfs(s, e):
+    # q = []      # 그냥 append, pop 사용시 : 34272 KB	428 ms
     q = deque()
-    q.append(n)
-    while q:
-        x = q.popleft()
-        if x == k:
-            print(dist[x])
-            break
 
-        for j in (x-1,x+1,x*2):
-            if 0<= j <= MAX and not dist[j]:
-                dist[j] = dist[x] +1
-                q.append(j)
+    q.append(s)
+    v[s] = 1
+
+    while q:
+        # c = q.pop(0)
+        c = q.popleft()
+
+        if c == e:
+            print(v[c] - 1)
+            return
+
+        for n in [c + 1, c - 1, c * 2]:
+            if 0 <= n <= MAX and not v[n]:
+                q.append(n)
+                v[n] = v[c] + 1
+
+
+S, E = map(int, input().split())
 
 MAX = 100000
-n,k = map(int, input().split())
-dist = [0] * (MAX+1)
 
-bfs()
+v = [0] * (MAX + 1)
+
+bfs(S, E)
+
+
+# # -----------------------------------------------------
+# # DFS로 풀 경우, 무한 루프가 발생.
+
+# def dfs(cnt, n):
+#     global ans
+
+#     if n == K:
+#         ans = min(ans, cnt)
+#         return
+
+#     dfs(cnt + 1, n * 2)
+#     dfs(cnt + 1, n + 1)
+#     dfs(cnt + 1, n - 1)
+
+
+
+# N, K = map(int, input().split())
+
+# ans = 100000
+
+# dfs(0, N)
+
+# print(ans)
