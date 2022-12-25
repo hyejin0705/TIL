@@ -14,6 +14,8 @@ def bfs(s, e):
             return
 
         for n, move in [(c + 1, 1), (c - 1, 1), (c * 2, 0)]:
+
+            # 순간이동하면, 0이기 때문에, 나중에 작은 경우가 올 수 있음.
             if 0 <= n <= MAX and (not v[n] or v[n] > v[c] + move):
                 q.append(n)
                 v[n] = v[c] + move
