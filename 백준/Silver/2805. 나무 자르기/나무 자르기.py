@@ -1,25 +1,20 @@
 import sys
 
-n, m = map(int, sys.stdin.readline().split())
-arr = list(map(int, sys.stdin.readline().split()))
+N, M = map(int, sys.stdin.readline().split())
 
+lst = sorted(list(map(int, sys.stdin.readline().split())), reverse=True)
 
-def binary(arr):
-    start = 1
-    end = max(arr)
-    while start <= end:
-        mid = (start + end) // 2
-        m_len = 0
-        
-        for i in range(n):
-            if arr[i] >= mid:
-                m_len += arr[i] - mid
+check = 0
+lst.append(0)
+for i in range(1, N + 1):
+    check += (lst[i - 1] - lst[i]) * i
 
-        if m_len >= m:
-            start = mid + 1
-        else:
-            end = mid - 1
-    return end
+    if check == M:
+        ans = lst[i]
+        break
 
+    elif check > M:
+        ans = lst[i] + (check - M) // i
+        break
 
-print(binary(arr))
+print(ans)
