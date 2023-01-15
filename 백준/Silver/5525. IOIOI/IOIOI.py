@@ -1,3 +1,33 @@
+# 시간초과 해결 => Pn의 규칙을 파악 ('IOI' * n)
+
+import sys
+
+N = int(sys.stdin.readline())
+
+M = int(sys.stdin.readline())
+
+check = sys.stdin.readline()
+
+ans, cnt, i = 0, 0, 0
+while i < M - 1:
+    if check[i:i + 3] == 'IOI':    # Pn = 'IOI' * n
+        cnt += 1
+        i += 2
+        if cnt == N:
+            ans += 1
+            cnt -= 1
+    else:
+        i += 1
+        cnt = 0
+        continue
+
+print(ans)
+
+
+# # -----------------------------------------------------
+# 부분점수 획득 : 50점
+# 완전탐색 => 시간초과 
+
 import sys
 
 IO = 'IO'
