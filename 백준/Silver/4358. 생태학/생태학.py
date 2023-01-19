@@ -1,19 +1,20 @@
 import sys
 
-total = 0
-dic = dict()
-while 1:
-    word = sys.stdin.readline().rstrip()
-    if word == '':
+tree_dict = {}
+
+while True:
+    string = sys.stdin.readline().strip()
+
+    if not string:
         break
-    total += 1   
-    if word in dic:   # 전에 이미 나왔으면
-        dic[word] += 1
+
+    if not tree_dict.get(string, 0):
+        tree_dict.setdefault(string, 1)
     else:
-        dic[word] = 1
-sdic = dict(sorted(dic.items()))
-for i in sdic:
-    a = sdic[i]
-    per = (a / total * 100)
-    
-    print("%s %.4f" %(i, per))
+        tree_dict[string] += 1
+
+tree = sorted(list(tree_dict.keys()))
+total = sum(tree_dict.values())
+
+for check in tree:
+    print("%s %.4f" % (check, tree_dict.get(check) / total * 100))
