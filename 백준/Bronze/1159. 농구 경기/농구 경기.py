@@ -1,17 +1,22 @@
-if __name__ == '__main__':
-    n = int(input())
-    player_list = []
-    for _ in range(n):
-        f = input()
-        player_list.append(f[0])
+N = int(input())
 
-    first_names = set(player_list)
-    result = []
-    for i in first_names:
-        if player_list.count(i) >= 5:
-            result.append(i)
+check_dic = {}
+for _ in range(N):
+    check = input()
 
-    if len(result) > 0:
-        print(''.join(sorted(result)))
+    if not check_dic.get(check[0], 0):
+        check_dic.setdefault(check[0], 1)
+
     else:
-        print("PREDAJA")
+        check_dic[check[0]] += 1
+
+ans = []
+for s, num in check_dic.items():
+    if num >= 5:
+        ans.append(s)
+
+if ans:
+    ans.sort()
+    print(''.join(ans))
+else:
+    print('PREDAJA')
