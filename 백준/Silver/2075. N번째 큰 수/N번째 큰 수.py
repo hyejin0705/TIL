@@ -1,13 +1,18 @@
+import sys, heapq
+
 N = int(input())
 
-ans = list(map(int, input().split()))
-ans.sort(reverse = True)
-for _ in range(1, N):
-    check = list(map(int, input().split()))
-    for j in range(N):
-        if min(ans) <= check[j]:
-            ans.append(check[j])
-            ans.sort(reverse=True)
-            ans.pop()
+ans = []
+for _ in range(N):
+    check = list(map(int, sys.stdin.readline().split()))
+    if not ans:
+        for ch in check:
+            heapq.heappush(ans, ch)
 
-print(ans[N-1])
+    else:
+        for ch in check:
+            if ans[0] < ch:
+                heapq.heappush(ans, ch)
+                heapq.heappop(ans)
+
+print(ans[0])
