@@ -1,9 +1,12 @@
-n = int(input())
-p = []
-for i in range(n):
-    p.append(list(map(int, input().split())))
-for i in range(1, len(p)):
-    p[i][0] = min(p[i - 1][1], p[i - 1][2]) + p[i][0]
-    p[i][1] = min(p[i - 1][0], p[i - 1][2]) + p[i][1]
-    p[i][2] = min(p[i - 1][0], p[i - 1][1]) + p[i][2]
-print(min(p[n - 1][0], p[n - 1][1], p[n - 1][2]))
+N = int(input())
+arr = [list(map(int, input().split())) for _ in range(N)]
+
+for i in range(1, N):
+    # red
+    arr[i][0] += min(arr[i-1][1], arr[i-1][2])
+    # Green
+    arr[i][1] += min(arr[i-1][0], arr[i-1][2])
+    # Blue
+    arr[i][2] += min(arr[i-1][0], arr[i-1][1])
+
+print(min(arr[N-1]))
