@@ -1,14 +1,10 @@
-import sys
-read = sys.stdin.readline
+N = int(input())
 
-cache = [0] * 11
-cache[1] = 1
-cache[2] = 2
-cache[3] = 4
+dp = [0] * 12
+dp[1], dp[2], dp[3] = 1, 2, 4
 
-for i in range(4, 11):
-    cache[i] = sum(cache[i-3:i])
+for i in range(4, 12):
+    dp[i] = sum(dp[i-3:])
 
-T = int(read())
-for _ in range(T):
-    print(cache[int(read())])
+for _ in range(N):
+    print(dp[int(input())])
