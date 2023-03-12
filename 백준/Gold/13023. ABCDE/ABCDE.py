@@ -1,11 +1,12 @@
 import sys
 
+# dfs 탐색
 def dfs(v, depth):
 
     # 친구 관계가 존재한다면 1출력 후 종료
     if depth == 4:
         print(1)
-        exit()
+        exit()    # 프로그램 즉시 종료
 
     # 반복문을 통해 친구 관계 확인
     for j in graph[v]:
@@ -32,4 +33,5 @@ for i in range(n):
     visited[i] = False
 
 # 친구 관계가 존재하지 않으므로 0 출력
-print(0)
+else:
+    print(0)
