@@ -1,10 +1,11 @@
+import sys
 import heapq
 
-n = int(input().rstrip())  #회의 갯수 n
+n = int(sys.stdin.readline().rstrip())  #회의 갯수 n
 
 con = []  # 회의
 for x in range(n) :
-  start, end = map(int, input().split())
+  start, end = map(int, sys.stdin.readline().split())
   con.append([start, end])  #시작시간, 끝나는시간 넣어주기
 
 con.sort()  #정렬
