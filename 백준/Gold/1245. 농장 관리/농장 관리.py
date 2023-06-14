@@ -1,6 +1,4 @@
 import sys
-# 재귀 최대 깊이 설정
-sys.setrecursionlimit(10 ** 6)
 
 # dfs 탐색
 def dfs(a, b):
