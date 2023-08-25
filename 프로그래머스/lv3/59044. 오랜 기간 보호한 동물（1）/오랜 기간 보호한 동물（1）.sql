@@ -6,5 +6,6 @@ FROM ( SELECT i.name, i.datetime
            ON i.animal_id = o.animal_id
        WHERE o.datetime IS NULL
        ORDER BY i.datetime
+       -- ORDER BY를 서브쿼리에서 해야 정답ㅡㅜ
      )
 WHERE ROWNUM <= 3;
